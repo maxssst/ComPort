@@ -21,11 +21,11 @@ public class Main {
 
         while (arduino.openConnection()) {
             for (int i = 0; i < 10; i++) {
-                if (count <= 10) {
+                if (count <= 100) {
                     data += arduino.serialRead();
                     System.out.println(data);
                     count ++;
-                    Thread.sleep(2000);
+                    Thread.sleep(4000);
                 }
                 try {
                     BufferedWriter writer = new BufferedWriter(new FileWriter("outputData" + count + ".txt"));
