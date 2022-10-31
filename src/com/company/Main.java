@@ -30,6 +30,7 @@ public class Main {
                 try {
                     BufferedWriter writer = new BufferedWriter(new FileWriter("outputData" + count + ".txt"));
                     writer.write(data);
+                    System.out.println(data);
                     writer.close();
 
                 } catch (IOException e) {
